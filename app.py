@@ -7,7 +7,7 @@ conexion = psycopg2.connect(
     host="dpg-d6rkug450q8c73f4i78g-a",
     database="biblioteca_db_2sq1",
     user="biblioteca_db_2sq1_user",
-    password="BnEOA2fWt3Khmaoulk6EE3LQfMb5ptwL"
+    password="BnEOA2fWt3Khmaoulk6EE3LQfMb5ptwL",
     port="5432"
 )
 
