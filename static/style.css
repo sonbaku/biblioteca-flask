@@ -1,10 +1,14 @@
+/* ESTILO GENERAL */
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f6f9;
     margin: 0;
+    padding: 0;
 }
 
-/* barra superior */
+
+/* BARRA SUPERIOR */
 
 .header{
     background-color: #2c3e50;
@@ -32,14 +36,16 @@ body{
     background-color: #c0392b;
 }
 
-/* contenido */
+
+/* CONTENIDO PRINCIPAL */
 
 .container{
     text-align: center;
     margin-top: 40px;
 }
 
-/* botones */
+
+/* BOTONES */
 
 .btn{
     display: inline-block;
@@ -55,7 +61,8 @@ body{
     background-color: #2980b9;
 }
 
-/* tablas */
+
+/* TABLAS */
 
 table{
     margin: auto;
@@ -79,10 +86,16 @@ tr:nth-child(even){
     background-color: #f2f2f2;
 }
 
+
+/* INPUTS GENERALES */
+
 input{
     padding: 8px;
     width: 220px;
 }
+
+
+/* BOTONES GENERALES */
 
 button{
     background-color: #27ae60;
@@ -90,9 +103,15 @@ button{
     border: none;
     padding: 10px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
-/* login */
+button:hover{
+    background-color: #219150;
+}
+
+
+/* LOGIN */
 
 .login-container{
     display: flex;
@@ -120,66 +139,36 @@ button{
     margin-top: 10px;
 }
 
-body{
-font-family: Arial, Helvetica, sans-serif;
-background:#f4f6f9;
-margin:0;
-padding:0;
-}
 
-/* contenedor formulario */
+/* FORMULARIOS (AGREGAR / EDITAR) */
 
 .form-container{
-width:400px;
-margin:80px auto;
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-text-align:center;
+    width: 400px;
+    margin: 80px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
 .form-container input{
-width:90%;
-padding:10px;
-margin:10px 0;
-border:1px solid #ccc;
-border-radius:5px;
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .form-container button{
-background:#3498db;
-color:white;
-border:none;
-padding:10px 20px;
-border-radius:5px;
-cursor:pointer;
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .form-container button:hover{
-background:#2980b9; 
-}
-
-.btn-editar{
-background:#27ae60;
-color:white;
-padding:6px 12px;
-border-radius:5px;
-text-decoration:none;
-}
-
-.btn-eliminar{
-background:#e74c3c;
-color:white;
-padding:6px 12px;
-border-radius:5px;
-text-decoration:none;
-}
-
-.btn-editar:hover{
-background:#1e8449;
-}
-
-.btn-eliminar:hover{
-background:#c0392b;
+    background: #2980b9;
 }
