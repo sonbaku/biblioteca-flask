@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Libros</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<h2>Lista de Libros</h2>
+
+<a href="/menu">Volver al menú</a>
+
+<br><br>
+
+<table border="1">
+
+<tr>
+<th>ID</th>
+<th>Titulo</th>
+<th>Autor</th>
+<th>Año</th>
+<th>Precio</th>
+<th>Editar</th>
+<th>Eliminar</th>
+</tr>
+
+{% for libro in libros %}
+
+<tr>
+<td>{{ libro[0] }}</td>
+<td>{{ libro[1] }}</td>
+<td>{{ libro[2] }}</td>
+<td>{{ libro[3] }}</td>
+<td>{{ libro[4] }}</td>
+
+<td>
+<a href="/editar/{{ libro[0] }}">Editar</a>
+</td>
+
+<td>
+<a href="/eliminar/{{ libro[0] }}">Eliminar</a>
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+
+</html>
