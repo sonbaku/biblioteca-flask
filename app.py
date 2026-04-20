@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-# 🔥 CONEXIÓN CORREGIDA (OPCIÓN A)
+
 conexion = psycopg2.connect(
     host="dpg-d7ipq54vikkc73enaad0-a.oregon-postgres.render.com",
     database="biblioteca_db2",
