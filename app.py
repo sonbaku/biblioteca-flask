@@ -1,14 +1,17 @@
 from flask import Flask, render_template, request, redirect
 import psycopg2
+import os
 
 app = Flask(__name__)
 
+# 🔥 CONEXIÓN CORREGIDA (OPCIÓN A)
 conexion = psycopg2.connect(
-    host="dpg-d6rkug450q8c73f4i78g-a",
-    database="biblioteca_db_2sq1",
-    user="biblioteca_db_2sq1_user",
-    password="BnEOA2fWt3Khmaoulk6EE3LQfMb5ptwL",
-    port="5432"
+    host="dpg-d7ipq54vikkc73enaad0-a.oregon-postgres.render.com",
+    database="biblioteca_db2",
+    user="biblioteca_db2_user",
+    password="ZL1gCzsnurlVvdROL4ZcdLkOoMtIjzLS",
+    port="5432",
+    sslmode="require"
 )
 
 cursor = conexion.cursor()
@@ -17,6 +20,8 @@ cursor = conexion.cursor()
 @app.route('/')
 def login():
     return render_template("login.html")
+
+
 @app.route('/login', methods=['POST'])
 def validar_login():
 
@@ -72,6 +77,7 @@ def guardar():
 
     return redirect('/libros')
 
+
 @app.route('/eliminar/<int:id>')
 def eliminar(id):
 
@@ -80,6 +86,7 @@ def eliminar(id):
 
     return redirect('/libros')
 
+
 @app.route('/editar/<int:id>')
 def editar(id):
 
@@ -87,6 +94,7 @@ def editar(id):
     libro = cursor.fetchone()
 
     return render_template("editar.html", libro=libro)
+
 
 @app.route('/actualizar/<int:id>', methods=['POST'])
 def actualizar(id):
@@ -104,12 +112,12 @@ def actualizar(id):
     conexion.commit()
 
     return redirect('/libros')
+
+
 @app.route('/logout')
 def logout():
     return redirect('/')
 
-
-import os
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
