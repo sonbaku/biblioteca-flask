@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-<title>Menú</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <title>Menú</title>
 </head>
-
 <body>
 
 <div class="header">
-<h1>Biblioteca</h1>
-<a class="logout" href="/logout">Cerrar sesión</a>
+  <h1>Biblioteca</h1>
+  <a class="logout" href="/logout">Cerrar sesión</a>
 </div>
 
 <div class="container">
+  <h2>Menú principal</h2>
 
-<h2>Menú principal</h2>
+  <a class="btn" href="/libros">Ver libros (PostgreSQL)</a>
+  <a class="btn" href="/agregar">Agregar libro</a>
 
-<a class="btn" href="/libros">Ver libros</a>
-<a class="btn" href="/agregar">Agregar libro</a>
+  <br><br>
+
+  <a class="btn" href="/productos">Stock de productos (MongoDB)</a>
 
 </div>
 

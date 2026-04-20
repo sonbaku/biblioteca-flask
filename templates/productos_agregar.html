@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Agregar Producto</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="header">
+  <h1>Biblioteca</h1>
+  <a class="logout" href="/logout">Cerrar sesión</a>
+</div>
+
+<div class="container">
+  <h2>Agregar Producto</h2>
+
+  <form action="/producto/guardar" method="POST">
+    <input type="text"   name="nombre"    placeholder="Nombre del producto" required><br><br>
+    <input type="text"   name="categoria" placeholder="Categoría" required><br><br>
+    <input type="number" name="precio"    placeholder="Precio" step="0.01" min="0" required><br><br>
+    <input type="number" name="stock"     placeholder="Stock" min="0" required><br><br>
+    <button type="submit">Guardar</button>
+  </form>
+
+  <br><a href="/productos">Cancelar</a>
+</div>
+
+</body>
+</html>
